@@ -171,7 +171,7 @@ public abstract class Piece
      * */
     public boolean isOut(int x, int y)
     {
-        if (x < 0 || x > 7 || y < 0 || y > 7)
+        if (x < 0 || x > chessboard.getWidth()-1 || y < 0 || y > chessboard.getHeight()-1)
         {
             return true;
         }
@@ -193,7 +193,7 @@ public abstract class Piece
             return false;
         }
         Piece piece = getChessboard().getSquares()[x][y].piece;
-        if (piece == null || //if this sqhuare is empty
+        if (piece == null || //if this square is empty
                 piece.getPlayer() != this.getPlayer()) //or piece is another player
         {
             return true;

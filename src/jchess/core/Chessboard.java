@@ -28,6 +28,7 @@ import jchess.core.moves.Move;
 import jchess.core.moves.Moves;
 import jchess.core.pieces.Piece;
 import jchess.core.pieces.implementation.Bishop;
+import jchess.core.pieces.implementation.Guard;
 import jchess.core.pieces.implementation.King;
 import jchess.core.pieces.implementation.Knight;
 import jchess.core.pieces.implementation.Pawn;
@@ -178,7 +179,7 @@ public class Chessboard
         }
 
         this.getSquare(0, i).setPiece(new Rook(this, player));
-        this.getSquare(7, i).setPiece(new Rook(this, player));
+        this.getSquare(7, i).setPiece(new Guard(this, player));
         this.getSquare(1, i).setPiece(new Knight(this, player));
         this.getSquare(6, i).setPiece(new Knight(this, player));
         this.getSquare(2, i).setPiece(new Bishop(this, player));
