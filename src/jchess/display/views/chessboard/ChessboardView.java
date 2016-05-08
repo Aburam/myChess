@@ -19,7 +19,12 @@ import jchess.utils.GUI;
  */
 public abstract class ChessboardView extends JPanel
 {
-    private static final int CENTER_POSITION = 3;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1580966223025522242L;
+
+	private static final int CENTER_POSITION = 3;
     
     /*
      * image of chessboard
@@ -65,6 +70,11 @@ public abstract class ChessboardView extends JPanel
     protected float squareHeight;
     
     /*
+     * height of width
+     */
+    protected float squareWidth;
+    
+    /*
      * image x position (used in JChessView class!)
      */
     public static final int imgX = 5; 
@@ -77,12 +87,12 @@ public abstract class ChessboardView extends JPanel
     /*
      * image width
      */
-    public static final int imgWidht = 480;
+    public static final int imgWidth = 480;
     
     /*
      * image height
      */
-    public static final int imgHeight = imgWidht;
+    public static final int imgHeight = imgWidth;
     
     private Chessboard chessboard;
     
@@ -100,7 +110,9 @@ public abstract class ChessboardView extends JPanel
     
     abstract public int getSquareHeight();
     
-    abstract public void resizeChessboard(int height);
+    abstract public int getSquareWidth();
+    
+    abstract public void resizeChessboard(int width,int height);
     
     abstract public Point getTopLeftPoint();
     
@@ -154,4 +166,6 @@ public abstract class ChessboardView extends JPanel
     {
         return (-(squarePosition-centerPosition)) + centerPosition + 1;
     }
+
+	
 }

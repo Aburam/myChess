@@ -20,9 +20,9 @@
  */
 package jchess.core.pieces.implementation;
 
-import jchess.core.pieces.Piece;
 import jchess.core.Chessboard;
 import jchess.core.Player;
+import jchess.core.pieces.Piece;
 import jchess.core.pieces.traits.behaviors.implementation.BishopBehavior;
 import jchess.core.pieces.traits.behaviors.implementation.RookBehavior;
 
@@ -49,6 +49,7 @@ public class Queen extends Piece
         this.symbol = "Q";
         this.addBehavior(new RookBehavior(this));
         this.addBehavior(new BishopBehavior(this));
+        this.score=10;
     }
-    
+
 }

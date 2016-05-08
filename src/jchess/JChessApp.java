@@ -18,6 +18,7 @@ package jchess;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 import java.awt.Window;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -109,16 +110,19 @@ public class JChessApp extends SingleFrameApplication {
      */
     public static void main(String[] args) 
     {
-        launch(JChessApp.class, args);
         Properties logProp = new Properties();
         try
         {   
-            logProp.load(JChessApp.class.getClassLoader().getResourceAsStream(LOG_FILE)); 
-            PropertyConfigurator.configure(logProp);
+            //logProp.load(JChessApp.class.getClassLoader().getResourceAsStream(LOG_FILE)); 
+        	logProp.load(new FileInputStream(LOG_FILE));
+        	PropertyConfigurator.configure(logProp);
+        	
         }
         catch (NullPointerException | IOException e)
         {
             System.err.println("Logging not enabled : "+e.getMessage());
         } 
+        launch(JChessApp.class, args);
+
     }
 }

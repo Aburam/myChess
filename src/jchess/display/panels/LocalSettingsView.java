@@ -24,7 +24,12 @@ import jchess.utils.Settings;
  */
 public class LocalSettingsView extends JPanel implements ActionListener
 {
-    private JCheckBox isUpsideDown;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6134915953298988783L;
+
+	private JCheckBox isUpsideDown;
     
     private JCheckBox isDisplayLegalMovesEnabled;
     

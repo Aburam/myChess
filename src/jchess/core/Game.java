@@ -15,29 +15,35 @@
 
 package jchess.core;
 
-import jchess.core.pieces.implementation.King;
+import java.awt.Dimension;
+import java.awt.Point;
 import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import javax.swing.*;
-import java.awt.*;
-import java.io.File;
 import java.io.BufferedReader;
-import java.io.FileWriter;
+import java.io.File;
 import java.io.FileReader;
-import java.util.Calendar;
-import java.awt.event.ComponentListener;
-import java.awt.event.WindowEvent;
-import org.apache.log4j.Logger;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Calendar;
+
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+
 import jchess.JChessApp;
 import jchess.core.moves.DirectorMove;
-import jchess.core.moves.MonteurMove;
 import jchess.core.moves.MoveFromTo;
 import jchess.core.moves.Moves;
+import jchess.core.pieces.implementation.King;
+import jchess.core.visitor.VisitMethods;
 import jchess.display.panels.LocalSettingsView;
 import jchess.display.views.chessboard.ChessboardView;
 import jchess.utils.Settings;
+
+import org.apache.log4j.Logger;
 
 
 
@@ -316,7 +322,7 @@ public class Game extends JPanel implements ComponentListener, MouseListener
             ChessboardView chessboardView = chessboard.getChessboardView();
             if (JChessApp.getJavaChessView().getNumberOfOpenedTabs() == 0)
             {
-                chessboardView.resizeChessboard(chessboardView.getChessboardHeight(false));
+                chessboardView.resizeChessboard(chessboardView.getChessboardWidht(),chessboardView.getChessboardHeight(false));
                 chessboard.repaint();
                 activeGame.repaint();
             }            
@@ -564,12 +570,10 @@ public class Game extends JPanel implements ComponentListener, MouseListener
                     {
                         if (getSettings().getGameType() == Settings.gameTypes.local)
                         {
-                        	System.out.println(getChessboard().getActiveSquare().getPozX()-1);
                         	monteurMove.xFrom(getChessboard().getActiveSquare().getPozX())
                         		.yFrom(getChessboard().getActiveSquare().getPozY())
                         		.xTo(sq.getPozX())
                         		.yTo(sq.getPozY());
-                        	//directorMove.setMonteurMove(monteurMove);
                         	directorMove.move();
                             //getChessboard().move(getChessboard().getActiveSquare(), sq);
                         }
@@ -601,6 +605,8 @@ public class Game extends JPanel implements ComponentListener, MouseListener
                                 break;
                         }
                     }
+                    VisitMethods.m1(chessboard);
+                    VisitMethods.m2(chessboard);
                     
                 } 
                 catch(NullPointerException exc)
@@ -733,12 +739,15 @@ public class Game extends JPanel implements ComponentListener, MouseListener
 
     public void resizeGame()
     {
-        int height = this.getHeight() >= this.getWidth() ? this.getWidth() : this.getHeight();
-        int chessHeight = (int)Math.round((height * 0.88)/8 ) * 8;
+        int height = this.getHeight();
+        int width = this.getHeight();
+        int chessHeight = (int)Math.round((height * 0.88)/8 )*8;
+        int chessWidth = (int)Math.round((width * 0.88)/8 )*8;
+        System.out.println(chessHeight);
         int chessWidthWithLabels;
         JScrollPane movesScrollPane = this.getMoves().getScrollPane();
         ChessboardView chessboardView = getChessboard().getChessboardView();
-        chessboardView.resizeChessboard((int)chessHeight);
+        chessboardView.resizeChessboard((int)chessWidth,(int)chessHeight);
         chessHeight = chessboardView.getHeight();
         chessWidthWithLabels  = chessboardView.getChessboardWidht(true);
         movesScrollPane.setLocation(new Point(chessHeight + 5, 100));

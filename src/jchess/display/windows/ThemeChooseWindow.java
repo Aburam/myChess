@@ -39,7 +39,12 @@ import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
  */
 public class ThemeChooseWindow extends JDialog implements ActionListener, ListSelectionListener
 {
-    private static final Logger LOG = Logger.getLogger(ThemeChooseWindow.class);
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 379326344737536168L;
+
+	private static final Logger LOG = Logger.getLogger(ThemeChooseWindow.class);
     
     JList themesList;
     ImageIcon themePreview;

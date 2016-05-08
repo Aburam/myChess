@@ -20,9 +20,9 @@
  */
 package jchess.core.pieces.implementation;
 
-import jchess.core.pieces.Piece;
 import jchess.core.Chessboard;
 import jchess.core.Player;
+import jchess.core.pieces.Piece;
 import jchess.core.pieces.traits.behaviors.implementation.BishopBehavior;
 
 /**
@@ -42,11 +42,14 @@ import jchess.core.pieces.traits.behaviors.implementation.BishopBehavior;
 public class Bishop extends Piece
 {
     protected static final short value = 3;
+    
+
 
     public Bishop(Chessboard chessboard, Player player)
     {
         super(chessboard, player); //call initializer of super type: Piece
         this.symbol = "B";
         this.addBehavior(new BishopBehavior(this));
+        this.score=3;
     }
 }

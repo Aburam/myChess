@@ -15,9 +15,9 @@
 
 package jchess.core.pieces.implementation;
 
-import jchess.core.pieces.Piece;
 import jchess.core.Chessboard;
 import jchess.core.Player;
+import jchess.core.pieces.Piece;
 import jchess.core.pieces.traits.behaviors.implementation.PawnBehavior;
 
 /**
@@ -66,11 +66,13 @@ public class Pawn extends Piece
     
     protected static short value = 1;
     
+    
     public Pawn(Chessboard chessboard, Player player)
     {
         super(chessboard, player);
         this.symbol = "";
         this.behaviors.add(new PawnBehavior(this));
+        this.score=1;
     }
 
     void promote(Piece newPiece)

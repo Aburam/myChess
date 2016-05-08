@@ -34,10 +34,10 @@ package jchess.core.pieces.implementation;
         |_|_|_|_|_|_|_|_|0
         0 1 2 3 4 5 6 7
  */
-import jchess.core.pieces.Piece;
 import jchess.core.Chessboard;
 import jchess.core.Player;
 import jchess.core.Square;
+import jchess.core.pieces.Piece;
 import jchess.core.pieces.traits.behaviors.implementation.KingBehavior;
 
 public class King extends Piece
@@ -46,12 +46,15 @@ public class King extends Piece
     protected boolean wasMotioned = false;
     
     protected static final short value = 99;
+    
 
     public King(Chessboard chessboard, Player player)
     {
         super(chessboard, player);
         this.symbol = "K";
         this.addBehavior(new KingBehavior(this));
+        this.score=100;
+
     }
     /** Method to check is the king is checked
      *  @return bool true if king is not save, else returns false
@@ -167,4 +170,5 @@ public class King extends Piece
     {
         this.wasMotioned = wasMotioned;
     }
+	
 }

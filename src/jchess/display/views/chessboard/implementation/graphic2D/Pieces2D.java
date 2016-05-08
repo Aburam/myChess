@@ -160,17 +160,19 @@ public class Pieces2D
             g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             Point topLeft = chessboardView.getTopLeftPoint();
             int height = chessboardView.getSquareHeight();
-            int x = (pozX * height) + topLeft.x;
+            int width = chessboardView.getSquareWidth();
+
+            int x = (pozX * width) + topLeft.x;
             int y = (pozY * height) + topLeft.y;
             if (image != null && g != null)
             {
                 Image tempImage = image;
-                BufferedImage resized = new BufferedImage(height, height, BufferedImage.TYPE_INT_ARGB_PRE);
+                BufferedImage resized = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB_PRE);
                 Graphics2D imageGr = (Graphics2D) resized.createGraphics();
                 imageGr.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-                imageGr.drawImage(tempImage, 0, 0, height, height, null);
+                imageGr.drawImage(tempImage, 0, 0, width, height, null);
                 imageGr.dispose();
-                image = resized.getScaledInstance(height, height, 0);
+                image = resized.getScaledInstance(width, height, 0);
                 g2d.drawImage(image, x, y, null);
             }
             else

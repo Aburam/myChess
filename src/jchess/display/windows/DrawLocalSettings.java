@@ -35,7 +35,12 @@ import org.apache.log4j.Logger;
 public class DrawLocalSettings extends JPanel implements ActionListener, TextListener
 {
 
-    private static final Logger LOG = Logger.getLogger(DrawLocalSettings.class);
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final Logger LOG = Logger.getLogger(DrawLocalSettings.class);
     
     JDialog parent;//needet to close newGame window
     JComboBox color;//to choose color of player

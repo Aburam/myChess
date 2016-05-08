@@ -18,24 +18,27 @@
  */
 package jchess.core;
 
-import jchess.core.pieces.implementation.King;
-import jchess.core.pieces.implementation.Knight;
-import jchess.core.pieces.implementation.Queen;
-import jchess.core.pieces.implementation.Rook;
-import jchess.core.pieces.implementation.Pawn;
-import jchess.core.pieces.implementation.Bishop;
-import jchess.core.pieces.Piece;
 import java.awt.event.ComponentEvent;
 import java.util.ArrayList;
 import java.util.Set;
+
 import jchess.JChessApp;
 import jchess.core.moves.Castling;
 import jchess.core.moves.Move;
 import jchess.core.moves.Moves;
-import jchess.display.views.chessboard.implementation.graphic2D.Chessboard2D;
+import jchess.core.pieces.Piece;
+import jchess.core.pieces.implementation.Bishop;
+import jchess.core.pieces.implementation.King;
+import jchess.core.pieces.implementation.Knight;
+import jchess.core.pieces.implementation.Pawn;
+import jchess.core.pieces.implementation.Queen;
+import jchess.core.pieces.implementation.Rook;
+import jchess.core.visitor.Visitor;
 import jchess.display.views.chessboard.ChessboardView;
+import jchess.display.views.chessboard.implementation.graphic2D.Chessboard2D;
 import jchess.utils.Settings;
-import org.apache.log4j.*;
+
+import org.apache.log4j.Logger;
 
 /** 
  * @author: Mateusz Sławomir Lach ( matlak, msl )
@@ -82,6 +85,10 @@ public class Chessboard
      */  
     private ChessboardView chessboardView;
 
+	private int width;
+
+	private int height;
+
     /** 
      * Chessboard class constructor
      * @param settings reference to Settings class object for this chessboard
@@ -92,20 +99,13 @@ public class Chessboard
     	
     	
         this.settings = settings;
+        createSquare(12,8);
+
         this.chessboardView = new Chessboard2D(this);
 
         this.activeSquareX = 0;
         this.activeSquareY = 0;
-        
-        this.squares = new Square[8][8];//initalization of 8x8 chessboard
 
-        for (int i = 0; i < 8; i++) //create object for each square
-        {
-            for (int y = 0; y < 8; y++)
-            {
-                this.squares[i][y] = new Square(i, y, null);
-            }
-        }//--endOf--create object for each square
         this.Moves = Moves;
 
     }/*--endOf-Chessboard--*/
@@ -209,7 +209,7 @@ public class Chessboard
             LOG.error("error setting pawns etc.");
             return;
         }
-        for (int x = 0; x < 8; x++)
+        for (int x = 0; x < this.getWidth(); x++)
         {
             this.getSquare(x, i).setPiece(new Pawn(this, player));
         }
@@ -344,7 +344,7 @@ public class Chessboard
                 twoSquareMovedPawn = null; //erase last saved move (for En passant)
             }
 
-            if (end.getPiece().getSquare().getPozY() == 0 || end.getPiece().getSquare().getPozY() == 7) //promote Pawn
+            if (end.getPiece().getSquare().getPozY() == 0 || end.getPiece().getSquare().getPozY() == this.getHeight()-1) //promote Pawn
             {
                 if (clearForwardHistory)
                 {
@@ -718,4 +718,34 @@ public class Chessboard
     {
         this.activeSquareY = activeSquareY;
     }
+    
+    /**
+     * 
+     */
+    public void accept(Visitor v){
+    	v.visitChessboard(this);
+    }
+    
+    public void createSquare(int n, int m){
+    	this.width = n;
+    	this.height = m;
+    	this.squares = new Square[n][m];
+
+        for (int i = 0; i < n; i++) //create object for each square
+        {
+            for (int y = 0; y < m; y++)
+            {
+                this.squares[i][y] = new Square(i, y, null);
+            }
+        }//--endOf--create object for each square
+    	
+    }
+
+	public int getWidth() {
+		return this.width;
+	}
+	
+	public int getHeight(){
+		return this.height;
+	}
 }

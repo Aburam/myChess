@@ -20,24 +20,26 @@
  */
 package jchess.core.moves;
 
-import jchess.core.Chessboard;
-import jchess.core.Game;
-import jchess.core.Player;
-import jchess.core.pieces.Piece;
-import java.util.ArrayList;
-import java.util.Stack;
-import java.awt.Point;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.table.*;
 import java.awt.Dimension;
 import java.awt.Rectangle;
+import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.Set;
+import java.util.Stack;
+
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
+
+import jchess.core.Chessboard;
 import jchess.core.Colors;
-import jchess.utils.Settings;
+import jchess.core.Game;
 import jchess.core.Square;
+import jchess.core.pieces.Piece;
+import jchess.utils.Settings;
+
 import org.apache.log4j.Logger;
 
 /** Class representing the players moves, it's also checking

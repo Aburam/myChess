@@ -15,22 +15,19 @@
 
 package jchess.core.pieces;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.awt.Point;
-import java.awt.RenderingHints;
-import java.awt.image.BufferedImage;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
+
 import jchess.core.Chessboard;
 import jchess.core.Colors;
 import jchess.core.Player;
 import jchess.core.Square;
 import jchess.core.pieces.traits.behaviors.Behavior;
+import jchess.core.visitor.Visitor;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -52,6 +49,8 @@ public abstract class Piece
     protected String name;
     
     protected String symbol;
+    
+    protected int score = 0;
     
     protected static short value = 0;
     
@@ -75,6 +74,10 @@ public abstract class Piece
     {
         return value;
     }        
+    
+    public int getScore(){
+    	return score;
+    }
     
     public void addBehavior(Behavior behavior)
     {
@@ -284,5 +287,10 @@ public abstract class Piece
     public void setName(String name)
     {
         this.name = name;
+    }
+    
+    
+    public void accept(Visitor v){
+    	v.visitPiece(this);
     }
 }

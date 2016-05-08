@@ -19,7 +19,12 @@ import org.jdesktop.application.Action;
 
 public class JChessAboutBox extends javax.swing.JDialog {
 
-    public JChessAboutBox(java.awt.Frame parent) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public JChessAboutBox(java.awt.Frame parent) {
         super(parent);
         initComponents();
         getRootPane().setDefaultButton(closeButton);
