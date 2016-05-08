@@ -9728,3 +9728,175 @@ Pièces noires : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook 
 2016-05-08 12:28:29 VisitorType [INFO] Pièces blanches : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 },
 Pièces noires : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 }
 2016-05-08 12:28:29 VisitorType [INFO] Score du joueur blanc : 144, Score du joueur noir : 144
+2016-05-08 18:10:58 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@74a9ecdb
+2016-05-08 18:10:58 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6a05e835
+2016-05-08 18:10:58 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@32a601c0
+2016-05-08 18:10:58 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3fcaef98
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@77929b07
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@28450cae
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@33dd9376
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6d64cd72
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@11e384f3
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@197408f4
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3cd6e0dc
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4c9151a2
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7a2ae3c5
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@25bb1498
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@55ee87cf
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7a7266c8
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@752b0f4b
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3c12b7b1
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5675789b
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1cc5f67f
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1a812ade
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@33187721
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6502e11
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@11f02c05
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2eb57992
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@53789c54
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@96d8cca
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6ce66b2e
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7136f572
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2f52544e
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@158929ab
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@888b3c3
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@112025eb
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1c52af26
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@44d67426
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@40f66571
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3764b4e1
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3d5e8eb6
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3ec994ec
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@37ebb9cc
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@507f0c09
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@57e9b05e
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@31ac5614
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@50595993
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5ce1f99a
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1fb6a2c9
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5bd2deb7
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@57c2305
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3533f553
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@34ba8ea6
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1e4c796
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@67b4aa29
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2125b1dc
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1c4f4477
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@cb70484
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6748c6fa
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5e3eb3bb
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@345c3343
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7d2153a5
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5102b6a7
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5958a026
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@bccd3e6
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@36424c5
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@384fb634
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7630494
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@19297e26
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2a15cd88
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@49d8a04a
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1c5b81fd
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@532fb1b8
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1a113806
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@61dda170
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6dab9201
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@49c88c13
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2186539f
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@36671d53
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4fd33746
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@cb28691
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6a376a1a
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7e8aa692
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5433bf69
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@58b045bf
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1f53ad0d
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5e5e17b4
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@274b6ccb
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@33ff14c2
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3358f58b
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2d9ec92d
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@280ba353
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@56bcaf84
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4f2e11d1
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@601655a1
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3bd67c77
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3a9a2b28
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@33de4467
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5a4493b5
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4be3a4eb
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2a680fba
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@15e3e464
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4267e1bd
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1769ace5
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@42f6b5b8
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5ee55b2b
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@e8d368c
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@28c0af46
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@178a2a88
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@435b5e9a
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7158623f
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5d949afe
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@65cce1f7
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@73108d4c
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1990725c
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7471f074
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2d168424
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@22fc02f5
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@28915f15
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@2f24b28c
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@50ebfad3
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@44ff6c92
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@24450bf2
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@54e0890b
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4ab1ebd8
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4ca4c9f
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6f6fa837
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@8aade57
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4de9e154
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@26e5374f
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@47fa5a7a
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@25a2d244
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@43cb9359
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4110c370
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@77f941c8
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@528c975a
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5d47e8c3
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@25830dd6
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4559bfdd
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1ec2c7b9
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@14b4989e
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@1e34248b
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@69abf76b
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@16c7f85
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@769b2d54
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@75abfb75
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@73f1340e
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4533bf7e
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@412fd0a1
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@5c3f83e4
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@18ae7079
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6cb0a03f
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@a8847c7
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@3d70ab9e
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7e9ad9cb
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@6253862
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7ba2fd5
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4c8b12a3
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@7bfc4c78
+2016-05-08 18:10:59 GUI [ERROR] IOException, some error during getting config file!,, message: config.txt (Aucun fichier ou dossier de ce type) stackTrace: [Ljava.lang.StackTraceElement;@4ff0eded
+2016-05-08 18:11:41 VisitorType [INFO] Pièces blanches : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 },
+Pièces noires : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 }
+2016-05-08 18:11:41 VisitorType [INFO] Score du joueur blanc : 144, Score du joueur noir : 144
+2016-05-08 18:11:42 VisitorType [INFO] Pièces blanches : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 },
+Pièces noires : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 }
+2016-05-08 18:11:42 VisitorType [INFO] Score du joueur blanc : 144, Score du joueur noir : 144
+2016-05-08 18:11:42 VisitorType [INFO] Pièces blanches : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 },
+Pièces noires : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 }
+2016-05-08 18:11:42 VisitorType [INFO] Score du joueur blanc : 144, Score du joueur noir : 144
+2016-05-08 18:11:43 VisitorType [INFO] Pièces blanches : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 },
+Pièces noires : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 }
+2016-05-08 18:11:43 VisitorType [INFO] Score du joueur blanc : 144, Score du joueur noir : 144
+2016-05-08 18:11:44 VisitorType [INFO] Pièces blanches : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 },
+Pièces noires : { Bishop : 2, King : 1, Queen : 1, Knight : 2, Pawn : 12, Rook : 2 }
+2016-05-08 18:11:44 VisitorType [INFO] Score du joueur blanc : 144, Score du joueur noir : 144

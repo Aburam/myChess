@@ -147,7 +147,13 @@ public class King extends Piece
         futureSquare.piece  = currentSquare.piece; // move without redraw
         currentSquare.piece = null;
 
-        boolean ret = isSafe(this.getSquare());
+        boolean ret;
+        if (futureSquare.getPiece().equals(this)){
+        	ret = isSafe(futureSquare);
+        }
+        else {
+        	ret = isSafe(this.getSquare());
+        }
 
         currentSquare.piece = futureSquare.piece;
         futureSquare.piece  = tmp;
