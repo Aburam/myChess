@@ -1,14 +1,14 @@
 package jchess.core.moves;
 
 
-import jchess.core.Chessboard;
-
 import org.apache.log4j.Logger;
+
+import jchess.core.Chessboard;
+import jchess.display.windows.DrawLocalSettings;
 
 public class MoveAlgebrique extends MonteurMove {
 
 	private final Logger LOG = Logger.getLogger(MoveAlgebrique.class);
-
 	
 	public MoveAlgebrique(Chessboard chessboard) {
 		super(chessboard);
@@ -20,6 +20,7 @@ public class MoveAlgebrique extends MonteurMove {
 	
 	public MoveAlgebrique from(String from) {
 		if(from.length()!=2){
+			final Logger LOG = Logger.getLogger(MoveAlgebrique.class);
 
 	        LOG.error("Erreur, il faut entrer un numéro de case");//4test
 		}
@@ -33,6 +34,7 @@ public class MoveAlgebrique extends MonteurMove {
 	
 	public MoveAlgebrique to(String to) {
 		if(to.length()!=2){
+			final Logger LOG = Logger.getLogger(MoveAlgebrique.class);
 
 	        LOG.error("Erreur, il faut entrer un numéro de case");//4test
 		}

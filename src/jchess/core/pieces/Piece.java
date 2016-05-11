@@ -193,7 +193,7 @@ public abstract class Piece
             return false;
         }
         Piece piece = getChessboard().getSquares()[x][y].piece;
-        if (piece == null || //if this square is empty
+        if (piece == null || //if this sqhuare is empty
                 piece.getPlayer() != this.getPlayer()) //or piece is another player
         {
             return true;

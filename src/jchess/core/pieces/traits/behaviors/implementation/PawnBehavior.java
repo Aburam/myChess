@@ -64,7 +64,7 @@ public class PawnBehavior extends Behavior
 
             list.add(chessboard.getSquares()[piece.getSquare().getPozX()][first]);
 
-            if ((piece.getPlayer().isGoDown() && piece.getSquare().getPozY() == 1) || (!piece.getPlayer().isGoDown() && piece.getSquare().getPozY() == 6))
+            if ((piece.getPlayer().isGoDown() && piece.getSquare().getPozY() == 1) || (!piece.getPlayer().isGoDown() && piece.getSquare().getPozY() == chessboard.getHeight()-2))
             {
                 sq1 = chessboard.getSquare(piece.getSquare().getPozX(), second);
                 if (sq1.getPiece() == null)

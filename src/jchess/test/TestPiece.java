@@ -11,8 +11,10 @@ import jchess.core.moves.Moves;
 import jchess.core.pieces.Piece;
 import jchess.core.pieces.implementation.Bishop;
 import jchess.core.pieces.implementation.King;
+import jchess.core.pieces.implementation.Knight;
 import jchess.core.pieces.implementation.Pawn;
 import jchess.utils.Settings;
+
 import org.jdesktop.application.SingleFrameApplication;
 import org.junit.Before;
 import org.junit.Test;
@@ -150,5 +152,25 @@ public class TestPiece {
         assertEquals(5, b1.getAllMoves().size());
 
 
+    }
+    
+    @Test
+    public void testKnight1() throws Exception {
+        // bishop in g1
+        Piece b1 = board.getSquare(6, 7).getPiece();
+        assertTrue(b1 instanceof Knight);
+        assertEquals(Colors.WHITE, b1.getPlayer().getColor());
+
+        assertEquals(2, b1.getAllMoves().size());
+    }
+    
+    @Test
+    public void testKnight2() throws Exception {
+        // bishop in b8
+        Piece b1 = board.getSquare(1, 0).getPiece();
+        assertTrue(b1 instanceof Knight);
+        assertEquals(Colors.BLACK, b1.getPlayer().getColor());
+
+        assertEquals(2, b1.getAllMoves().size());
     }
 }

@@ -15,29 +15,30 @@
 
 package jchess;
 
-import jchess.core.Game;
-import org.jdesktop.application.Action;
-import org.jdesktop.application.ResourceMap;
-import org.jdesktop.application.SingleFrameApplication;
-import org.jdesktop.application.FrameView;
-import org.jdesktop.application.TaskMonitor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.Timer;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+
 import javax.swing.Icon;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.*;
-import java.awt.event.*;
-import java.io.File;
-import java.applet.*;
-import java.io.IOException;
-import jchess.utils.GUI;
-import jchess.utils.Settings;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
+
+import jchess.core.Game;
 import jchess.display.windows.JChessAboutBox;
 import jchess.display.windows.PawnPromotionWindow;
 import jchess.display.windows.ThemeChooseWindow;
+import jchess.utils.GUI;
+import jchess.utils.Settings;
+
 import org.apache.log4j.Logger;
+import org.jdesktop.application.Action;
+import org.jdesktop.application.FrameView;
+import org.jdesktop.application.ResourceMap;
+import org.jdesktop.application.SingleFrameApplication;
+import org.jdesktop.application.TaskMonitor;
 
 
 
@@ -60,7 +61,7 @@ public class JChessView extends FrameView implements ActionListener, ComponentLi
 
     public Game addNewTab(String title)
     {
-        Game newGUI = new Game();
+    	Game newGUI = new Game();
         this.gamesPane.addTab(title, newGUI);
         return newGUI;
     }
@@ -245,7 +246,7 @@ public class JChessView extends FrameView implements ActionListener, ComponentLi
         promotionBox.setColor(color);
         JChessApp.getApplication().show(promotionBox);
 
-        return promotionBox.result;
+        return promotionBox.getResult();
     }
 
     public String showSaveWindow() {

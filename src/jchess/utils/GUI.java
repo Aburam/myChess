@@ -15,18 +15,20 @@
 
 package jchess.utils;
 
-import jchess.JChessApp;
-import jchess.core.Game;
-import java.awt.*;
-import java.net.*;
-import java.io.*;
-import java.util.Properties;
+import java.awt.Image;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import org.apache.log4j.Logger;
 import java.io.IOException;
+import java.util.Properties;
+
 import javax.imageio.ImageIO;
-import javax.imageio.stream.ImageInputStream;
+
+import jchess.JChessApp;
 import jchess.core.Colors;
+import jchess.core.Game;
+
+import org.apache.log4j.Logger;
 
 /** 
  * @author: Mateusz Sławomir Lach ( matlak, msl )

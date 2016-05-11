@@ -53,6 +53,10 @@ public class Settings implements Serializable
     protected boolean upsideDown;
     
     protected boolean displayLegalMovesEnabled = true;
+    
+    public int width = 8;
+
+	public int height = 8;
 
     /**
      * @return the runningChat
@@ -239,4 +243,21 @@ public class Settings implements Serializable
         LOG.debug("Locale: " + Settings.loc.getLocale().toString());
         return result;
     }
+
+	public int getWidth() {
+		return this.width;
+	}
+
+	public int getHeight() {
+		return this.height;
+	}
+	
+	public void setWidth(int width) {
+		this.width = width;	
+	}
+	
+	public void setHeight(int height) {
+		this.height = height;
+		
+	}
 }

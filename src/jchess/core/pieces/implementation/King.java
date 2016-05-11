@@ -74,9 +74,9 @@ public class King extends Piece
          */
         if (this.getAllMoves().isEmpty())
         {
-            for (int i = 0; i < 8; ++i)
+            for (int i = 0; i < getChessboard().getWidth(); ++i)
             {
-                for (int j = 0; j < 8; ++j)
+                for (int j = 0; j < getChessboard().getHeight(); ++j)
                 {
                     Piece piece = getChessboard().getSquare(i, j).getPiece();
                     if (null != piece && piece.getPlayer() == this.getPlayer() && !piece.getAllMoves().isEmpty())
@@ -127,9 +127,15 @@ public class King extends Piece
                 {
                     if(piece.getPlayer().getColor() != this.getPlayer().getColor() && piece != this)
                     {
-                        if(piece.getSquaresInRange().contains(this.getSquare()))
+                        if(piece.getSquaresInRange().contains(s))
                         {
-                            return false;
+							if (piece instanceof Pawn) {
+								if (!(s.getPozX() == piece.getSquare().getPozX() )) {
+									return false;
+								}
+							} else {
+								return false;
+							}
                         }
                     }
                 }
@@ -146,12 +152,12 @@ public class King extends Piece
         Piece tmp = futureSquare.piece;
         futureSquare.piece  = currentSquare.piece; // move without redraw
         currentSquare.piece = null;
-
+        			
         boolean ret;
-        if (futureSquare.getPiece().equals(this)){
+        if(futureSquare.getPiece().equals(this)){
         	ret = isSafe(futureSquare);
         }
-        else {
+        else{
         	ret = isSafe(this.getSquare());
         }
 

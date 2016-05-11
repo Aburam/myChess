@@ -149,7 +149,6 @@ public class Pieces2D
     
     public Image getImage(Colors color, Piece piece)
     {
-        System.out.println(piece.getClass().getName());
 
         return getCurrentImageSet().get(color).get(piece.getClass().getName());
     }

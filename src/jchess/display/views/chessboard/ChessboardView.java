@@ -100,11 +100,11 @@ public abstract class ChessboardView extends JPanel
     
     abstract public void unselect();
     
-    abstract public int getChessboardWidht();
+    abstract public int getChessboardWidth();
     
     abstract public int getChessboardHeight();
 
-    abstract public int getChessboardWidht(boolean includeLables);
+    abstract public int getChessboardWidth(boolean includeLables);
 
     abstract public int getChessboardHeight(boolean includeLabels);  
     

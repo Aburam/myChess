@@ -20,26 +20,24 @@
  */
 package jchess.core.moves;
 
-import java.awt.Dimension;
-import java.awt.Rectangle;
+import jchess.core.Chessboard;
+import jchess.core.Game;
+import jchess.core.Player;
+import jchess.core.pieces.Piece;
 import java.util.ArrayList;
-import java.util.EmptyStackException;
-import java.util.Set;
 import java.util.Stack;
-
-import javax.swing.JOptionPane;
+import java.awt.Point;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
-
-import jchess.core.Chessboard;
+import javax.swing.table.*;
+import java.awt.Dimension;
+import java.awt.Rectangle;
+import java.util.EmptyStackException;
+import java.util.Set;
+import javax.swing.JOptionPane;
 import jchess.core.Colors;
-import jchess.core.Game;
-import jchess.core.Square;
-import jchess.core.pieces.Piece;
 import jchess.utils.Settings;
-
+import jchess.core.Square;
 import org.apache.log4j.Logger;
 
 /** Class representing the players moves, it's also checking
@@ -48,18 +46,16 @@ import org.apache.log4j.Logger;
  * The history of moves is printing in a table
  * @param game The current game
  */
-public class Moves extends AbstractTableModel
+public class Moves extends MovesInterface
 {
     private static final Logger LOG = Logger.getLogger(Moves.class);
     
     private ArrayList<String> move = new ArrayList<String>();
     private int columnsNum = 3;
-    private int rowsNum = 0;
     private String[] names = new String[]
     {
         Settings.lang("white"), Settings.lang("black")
     };
-    private MyDefaultTableModel tableModel;
     private JScrollPane scrollPane;
     private JTable table;
     private boolean enterBlack = false;
@@ -70,6 +66,7 @@ public class Moves extends AbstractTableModel
     public Moves(Game game)
     { 
         super();
+        this.setCaller(this);
         this.tableModel = new MyDefaultTableModel();
         this.table = new JTable(this.tableModel);
         this.scrollPane = new JScrollPane(this.table);
@@ -84,23 +81,36 @@ public class Moves extends AbstractTableModel
         this.scrollPane.setAutoscrolls(true);
     }
 
-    public void draw()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#draw()
+	 */
+    @Override
+	public void draw()
     {
     }
 
-    @Override
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#getValueAt(int, int)
+	 */
+	@Override
     public String getValueAt(int x, int y)
     {
         return this.move.get((y * 2) - 1 + (x - 1));
     }
 
-    @Override
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#getRowCount()
+	 */
+	@Override
     public int getRowCount()
     {
         return this.rowsNum;
     }
 
-    @Override
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#getColumnCount()
+	 */
+	@Override
     public int getColumnCount()
     {
         return this.columnsNum;
@@ -125,7 +135,10 @@ public class Moves extends AbstractTableModel
         this.move.add(move);//add new move (O-O or O-O-O)
     }
 
-    @Override
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#isCellEditable(int, int)
+	 */
+	@Override
     public boolean isCellEditable(int a, int b)
     {
         return false;
@@ -142,11 +155,11 @@ public class Moves extends AbstractTableModel
             {
                 this.addRow();
                 this.rowsNum = this.tableModel.getRowCount() - 1;
-                this.tableModel.setValueAt(str, rowsNum, 0);
+                this.tableModel.setValueAt(caller.getStringValueTableModel(str), rowsNum, 0);
             }
             else
             {
-                this.tableModel.setValueAt(str, rowsNum, 1);
+                this.tableModel.setValueAt(caller.getStringValueTableModel(str), rowsNum, 1);
                 this.rowsNum = this.tableModel.getRowCount() - 1;
             }
             this.enterBlack = !this.enterBlack;
@@ -162,22 +175,32 @@ public class Moves extends AbstractTableModel
             }
         }
     }
+    
+    @Override
+    protected String getStringValueTableModel(String str){
+    	return str;
+    }
 
-    /** Method of adding new move
-     * @param move String which in is capt player move
-     */
-    public void addMove(String move)
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#addMove(java.lang.String)
+	 */
+    @Override
+	public void addMove(String move)
     {
         if (isMoveCorrect(move))
         {
             this.move.add(move);
-            this.addMove2Table(move);
+            addMove2Table(move);
             this.moveForwardStack.clear();
         }
 
     }
 
-    public void addMove(Square begin, Square end, boolean registerInHistory, Castling castlingMove, boolean wasEnPassant, Piece promotedPiece)
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#addMove(jchess.core.Square, jchess.core.Square, boolean, jchess.core.moves.Castling, boolean, jchess.core.pieces.Piece)
+	 */
+    @Override
+	public void addMove(Square begin, Square end, boolean registerInHistory, Castling castlingMove, boolean wasEnPassant, Piece promotedPiece)
     {
         boolean wasCastling = castlingMove != Castling.NONE;
         String locMove = begin.getPiece().getSymbol();
@@ -239,7 +262,7 @@ public class Moves extends AbstractTableModel
         else
         {
             this.move.add(locMove);
-            this.addMove2Table(locMove);
+            addMove2Table(locMove);
         }
         this.scrollPane.scrollRectToVisible(new Rectangle(0, this.scrollPane.getHeight() - 2, 1, 1));
 
@@ -250,22 +273,38 @@ public class Moves extends AbstractTableModel
         }
     }
 
-    public void clearMoveForwardStack()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#clearMoveForwardStack()
+	 */
+    @Override
+	public void clearMoveForwardStack()
     {
         this.moveForwardStack.clear();
     }
 
-    public JScrollPane getScrollPane()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#getScrollPane()
+	 */
+    @Override
+	public JScrollPane getScrollPane()
     {
         return this.scrollPane;
     }
 
-    public ArrayList<String> getMoves()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#getMoves()
+	 */
+    @Override
+	public ArrayList<String> getMoves()
     {
         return this.move;
     }
 
-    public synchronized Move getLastMoveFromHistory()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#getLastMoveFromHistory()
+	 */
+    @Override
+	public synchronized Move getLastMoveFromHistory()
     {
         try
         {
@@ -278,7 +317,11 @@ public class Moves extends AbstractTableModel
         }
     }
     
-    public synchronized Move getNextMoveFromHistory()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#getNextMoveFromHistory()
+	 */
+    @Override
+	public synchronized Move getNextMoveFromHistory()
     {
         try
         {
@@ -293,7 +336,11 @@ public class Moves extends AbstractTableModel
         
     }
 
-    public synchronized Move undo()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#undo()
+	 */
+    @Override
+	public synchronized Move undo()
     {
         try
         {
@@ -339,7 +386,11 @@ public class Moves extends AbstractTableModel
         }
     }
 
-    public synchronized Move redo()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#redo()
+	 */
+    @Override
+	public synchronized Move redo()
     {
         try
         {
@@ -423,7 +474,11 @@ public class Moves extends AbstractTableModel
         return true;
     }
 
-    public void addMoves(ArrayList<String> list)
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#addMoves(java.util.ArrayList)
+	 */
+    @Override
+	public void addMoves(ArrayList<String> list)
     {
         for (String singleMove : list)
         {
@@ -434,10 +489,11 @@ public class Moves extends AbstractTableModel
         }
     }
 
-    /** Method of getting the moves in string
-     *  @return str String which in is capt player move
-     */
-    public String getMovesInString()
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#getMovesInString()
+	 */
+    @Override
+	public String getMovesInString()
     {
         int n = 1;
         int i = 0;
@@ -455,10 +511,11 @@ public class Moves extends AbstractTableModel
         return str;
     }
 
-    /** Method to set all moves from String with validation test (usefoul for network game)
-     *  @param  moves String to set in String like PGN with full-notation format
-     */
-    public void setMoves(String moves)
+    /* (non-Javadoc)
+	 * @see jchess.core.moves.MovesInterface#setMoves(java.lang.String)
+	 */
+    @Override
+	public void setMoves(String moves)
     {
         int from = 0;
         int to = 0;

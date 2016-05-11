@@ -25,7 +25,7 @@ import java.util.Set;
 import jchess.JChessApp;
 import jchess.core.moves.Castling;
 import jchess.core.moves.Move;
-import jchess.core.moves.Moves;
+import jchess.core.moves.MovesInterface;
 import jchess.core.pieces.Piece;
 import jchess.core.pieces.implementation.Bishop;
 import jchess.core.pieces.implementation.Guard;
@@ -73,7 +73,7 @@ public class Chessboard
     //|-> Pawn whose in last turn moved two square
     protected Pawn twoSquareMovedPawn = null;
     
-    private Moves Moves;
+    private MovesInterface Moves;
     
     protected Square activeSquare;
     
@@ -85,8 +85,8 @@ public class Chessboard
      * chessboard view data object
      */  
     private ChessboardView chessboardView;
-
-	private int width;
+    
+    private int width;
 
 	private int height;
 
@@ -95,18 +95,17 @@ public class Chessboard
      * @param settings reference to Settings class object for this chessboard
      * @param moves_history reference to Moves class object for this chessboard 
      */
-    public Chessboard(Settings settings, Moves Moves)
+    public Chessboard(Settings settings, MovesInterface Moves)
     {
     	
     	
         this.settings = settings;
-        createSquare(12,8);
-
+        createSquare();
         this.chessboardView = new Chessboard2D(this);
 
         this.activeSquareX = 0;
         this.activeSquareY = 0;
-
+        
         this.Moves = Moves;
 
     }/*--endOf-Chessboard--*/
@@ -136,85 +135,22 @@ public class Chessboard
 
         if (places.equals("")) //if newGame
         {
-            this.setPieces4NewGame(plWhite, plBlack);
+            new RandomSetPiece().setPieces4NewGame(plWhite, plBlack, this, LOG);
         } 
         else //if loadedGame
         {
             return;
         }
     }/*--endOf-setPieces--*/
-
-
-    /**
-     *
-     */
-    private void setPieces4NewGame(Player plWhite, Player plBlack)
-    {
-        /* WHITE PIECES */
-        Player player = plBlack;
-        Player player1 = plWhite;
-        this.setFigures4NewGame(0, player);
-        this.setPawns4NewGame(1, player);
-        this.setFigures4NewGame(7, player1);
-        this.setPawns4NewGame(6, player1);
-    }/*--endOf-setPieces(boolean upsideDown)--*/
-
-
-    /**  
-     *  Method to set Figures in row (and set Queen and King to right position)
-     *  @param i row where to set figures (Rook, Knight etc.)
-     *  @param player which is owner of pawns
-     *  @param upsideDown if true white pieces will be on top of chessboard
-     * */
-    private void setFigures4NewGame(int i, Player player)
-    {
-        if (i != 0 && i != 7)
-        {
-            LOG.error("error setting figures like rook etc.");
-            return;
-        }
-        else if (i == 0)
-        {
-            player.goDown = true;
-        }
-
-        this.getSquare(0, i).setPiece(new Rook(this, player));
-        this.getSquare(7, i).setPiece(new Guard(this, player));
-        this.getSquare(1, i).setPiece(new Knight(this, player));
-        this.getSquare(6, i).setPiece(new Knight(this, player));
-        this.getSquare(2, i).setPiece(new Bishop(this, player));
-        this.getSquare(5, i).setPiece(new Bishop(this, player));
-        
-
-        this.getSquare(3, i).setPiece(new Queen(this, player));
-        if (player.getColor() == Colors.WHITE)
-        {
-            kingWhite = new King(this, player);
-            this.getSquare(4, i).setPiece(kingWhite);
-        }
-        else
-        {
-            kingBlack = new King(this, player);
-            this.getSquare(4, i).setPiece(kingBlack);
-        }
+    
+    public void setKingWhite(King kingWhite){
+    	this.kingWhite = kingWhite;
     }
-
-    /**  method set Pawns in row
-     *  @param i row where to set pawns
-     *  @param player player which is owner of pawns
-     * */
-    private void setPawns4NewGame(int i, Player player)
-    {
-        if (i != 1 && i != 6)
-        {
-            LOG.error("error setting pawns etc.");
-            return;
-        }
-        for (int x = 0; x < this.getWidth(); x++)
-        {
-            this.getSquare(x, i).setPiece(new Pawn(this, player));
-        }
+    
+    public void setKingBlack(King kingBlack){
+    	this.kingBlack = kingBlack;
     }
+    
     
     /** Method selecting piece in chessboard
      * @param  sq square to select (when clicked))
@@ -287,7 +223,7 @@ public class Chessboard
         Castling wasCastling = Castling.NONE;
         Piece promotedPiece = null;
         boolean wasEnPassant = false;
-        if (end.piece != null)
+        if (end.getPiece() != null)
         {
             end.getPiece().setSquare(null);
         }
@@ -296,20 +232,20 @@ public class Chessboard
         Square tempEnd = new Square(end);  //4 moves history
 
         begin.getPiece().setSquare(end);//set square of piece to ending
-        end.piece = begin.piece;//for ending square set piece from beginin square
+        end.piece = begin.getPiece();//for ending square set piece from beginin square
         begin.piece = null;//make null piece for begining square
 
         if (end.getPiece().getName().equals("King"))
         {
-            if (!((King) end.piece).getWasMotioned())
+            if (!((King) end.getPiece()).getWasMotioned())
             {
-                ((King) end.piece).setWasMotioned(true);
+                ((King) end.getPiece()).setWasMotioned(true);
             }
 
             //Castling
             if (begin.getPozX() + 2 == end.getPozX())
             {
-                move(getSquare(7, begin.getPozY()), getSquare(end.getPozX() - 1, begin.getPozY()), false, false);
+                move(getSquare(getWidth()-1, begin.getPozY()), getSquare(end.getPozX() - 1, begin.getPozY()), false, false);
                 wasCastling = Castling.SHORT_CASTLING;
             }
             else if (begin.getPozX() - 2 == end.getPozX())
@@ -330,29 +266,30 @@ public class Chessboard
         {
             if (getTwoSquareMovedPawn() != null && getSquares()[end.getPozX()][begin.getPozY()] == getTwoSquareMovedPawn().getSquare()) //en passant
             {
-                tempEnd.piece = getSquares()[end.getPozX()][begin.getPozY()].piece; //ugly hack - put taken pawn in en passant plasty do end square
+                tempEnd.setPiece( getSquares()[end.getPozX()][begin.getPozY()].getPiece()); //ugly hack - put taken pawn in en passant plasty do end square
 
-                squares[end.pozX][begin.pozY].piece = null;
+                squares[end.pozX][begin.pozY].setPiece(null);
                 wasEnPassant = true;
             }
 
             if (begin.getPozY() - end.getPozY() == 2 || end.getPozY() - begin.getPozY() == 2) //moved two square
             {
-                twoSquareMovedPawn = (Pawn) end.piece;
+                twoSquareMovedPawn = (Pawn) end.getPiece();
             }
             else
             {
                 twoSquareMovedPawn = null; //erase last saved move (for En passant)
             }
 
-            if (end.getPiece().getSquare().getPozY() == 0 || end.getPiece().getSquare().getPozY() == this.getHeight()-1) //promote Pawn
+            if (end.getPiece().getSquare().getPozY() == 0 || end.getPiece().getSquare().getPozY() == (getHeight()-1)) //promote Pawn
             {
+
                 if (clearForwardHistory)
                 {
+
                     String color = String.valueOf(end.getPiece().getPlayer().getColor().getSymbolAsString().toUpperCase());
                     String newPiece = JChessApp.getJavaChessView().showPawnPromotionBox(color); //return name of new piece
-                    
-                    Piece piece;
+                    Piece piece = null;
                     switch (newPiece)
                     {
                         case "Queen":
@@ -364,15 +301,20 @@ public class Chessboard
                         case "Bishop":
                             piece = new Bishop(this, end.getPiece().getPlayer());
                             break;
-                        default:
+                        case "Guard":
+                        	piece = new Guard(this, end.getPiece().getPlayer());
+                        	break;
+                        case "Knight":
                             piece = new Knight(this, end.getPiece().getPlayer());
                             break;
+                        default:
+                        	break;
                     }
                     piece.setChessboard(end.getPiece().getChessboard());
                     piece.setPlayer(end.getPiece().getPlayer());
                     piece.setSquare(end.getPiece().getSquare());
-                    end.piece = piece;                    
-                    promotedPiece = end.piece;
+                    end.setPiece(piece);                    
+                    promotedPiece = end.getPiece();
                 }
             }
         }
@@ -720,11 +662,12 @@ public class Chessboard
         this.activeSquareY = activeSquareY;
     }
     
-    /**
-     * 
-     */
     public void accept(Visitor v){
     	v.visitChessboard(this);
+    }
+    
+    public void createSquare(){
+    	this.createSquare(settings.getWidth(), settings.getHeight());
     }
     
     public void createSquare(int n, int m){
@@ -748,5 +691,14 @@ public class Chessboard
 	
 	public int getHeight(){
 		return this.height;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;	
+	}
+	
+	public void setHeight(int height) {
+		this.height = height;
+		
 	}
 }

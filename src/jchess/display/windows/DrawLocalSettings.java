@@ -62,6 +62,13 @@ public class DrawLocalSettings extends JPanel implements ActionListener, TextLis
     JButton okButton;
     JCheckBox timeGame;
     JComboBox<String> time4Game;
+    
+    JTextField sizeWidth;
+    JTextField sizeHeight;
+    JLabel sizeWidthLab;
+    JLabel sizeHeightLab;
+    
+    
     String colors[] =
     {
         Settings.lang("white"), Settings.lang("black")
@@ -135,6 +142,7 @@ public class DrawLocalSettings extends JPanel implements ActionListener, TextLis
             {
                 this.secondName.setText(this.trimString(secondName, 9));
             }
+            
             if (!this.oponentComp.isSelected()
                     && (this.firstName.getText().length() == 0 || this.secondName.getText().length() == 0))
             {
@@ -150,9 +158,19 @@ public class DrawLocalSettings extends JPanel implements ActionListener, TextLis
             //newGUI.getChat().setEnabled(false);
             
             Settings sett = newGUI.getSettings();//sett local settings variable
+            
+           
             Player pl1 = sett.getPlayerWhite();//set local player variable
             Player pl2 = sett.getPlayerBlack();//set local player variable
             sett.setGameMode(Settings.gameModes.newGame);
+            int width = Integer.parseInt(this.sizeWidth.getText());
+            if (width<26 && width >=8){									//Must be 8<widthSize<26
+            	sett.setWidth(width);
+            }
+            int height = Integer.parseInt(this.sizeHeight.getText()); //make names short to 10 digits
+            if (height<26 && height >=8){								//Must be 8<heightSize<26
+            	sett.setHeight(height);
+            }
             //if(this.firstName.getText().length() >9 ) this.firstName.setText(this.firstName.getText(0,8));
             //TODO: investigate and refactor
             if (this.color.getActionCommand().equals("biały")) //if first player is white
@@ -217,6 +235,14 @@ public class DrawLocalSettings extends JPanel implements ActionListener, TextLis
         this.upsideDown = new JCheckBox(Settings.lang("upside_down"));
         this.timeGame = new JCheckBox(Settings.lang("time_game_min"));
         this.time4Game = new JComboBox<String>(times);
+        
+        this.sizeWidth = new JTextField("", 2);
+        this.sizeWidth.setSize(new Dimension(50, 50));
+        this.sizeHeight = new JTextField("", 2);
+        this.sizeHeight.setSize(new Dimension(50, 50));
+        
+        this.sizeWidthLab = new JLabel(Settings.lang("size_width") + ": ");
+        this.sizeHeightLab = new JLabel(Settings.lang("size_height") + ": ");
 
         this.oponentComp = new JRadioButton(Settings.lang("against_computer"), false);
         this.oponentHuman = new JRadioButton(Settings.lang("against_other_human"), true);
@@ -268,20 +294,34 @@ public class DrawLocalSettings extends JPanel implements ActionListener, TextLis
         this.gbc.gridy = 6;
         this.gbl.setConstraints(computerLevel, gbc);
         this.add(computerLevel);
+        this.gbc.gridx = 0;
         this.gbc.gridy = 7;
+        this.gbl.setConstraints(sizeWidthLab, gbc);
+        this.add(sizeWidthLab);
+        this.gbc.gridy = 8;
+        this.gbl.setConstraints(sizeWidth, gbc);
+        this.add(sizeWidth);
+        this.gbc.gridx = 0;
+        this.gbc.gridy = 9;
+        this.gbl.setConstraints(sizeHeightLab, gbc);
+        this.add(sizeHeightLab);
+        this.gbc.gridy = 10;
+        this.gbl.setConstraints(sizeHeight, gbc);
+        this.add(sizeHeight);
+        this.gbc.gridy = 11;
         this.gbl.setConstraints(upsideDown, gbc);
         this.add(upsideDown);
-        this.gbc.gridy = 8;
+        this.gbc.gridy = 12;
         this.gbc.gridwidth = 1;
         this.gbl.setConstraints(timeGame, gbc);
         this.add(timeGame);
         this.gbc.gridx = 1;
-        this.gbc.gridy = 8;
+        this.gbc.gridy = 12;
         this.gbc.gridwidth = 1;
         this.gbl.setConstraints(time4Game, gbc);
         this.add(time4Game);
         this.gbc.gridx = 1;
-        this.gbc.gridy = 9;
+        this.gbc.gridy = 13;
         this.gbc.gridwidth = 0;
         this.gbl.setConstraints(okButton, gbc);
         this.add(okButton);
