@@ -80,6 +80,8 @@ public class PawnPromotionWindow extends JDialog implements ActionListener
         this.add(bishopButton);
         this.add(knightButton);
         this.add(guardButton);
+        
+        pack();
     }
 
     /** Method setting the color fo promoted pawn

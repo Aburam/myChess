@@ -135,7 +135,7 @@ public class Chessboard
 
         if (places.equals("")) //if newGame
         {
-            new RandomSetPiece().setPieces4NewGame(plWhite, plBlack, this, LOG);
+            new NormalSetPiece().setPieces4NewGame(plWhite, plBlack, this, LOG);
         } 
         else //if loadedGame
         {
